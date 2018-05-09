@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-npm install --save rimraf nyc
-rimraf coverage .nyc_output && node_modules/.bin/nyc --reporter=html node ${YourUnitTestFile}
+npm install --save-dev rimraf nyc
+node_modules/.bin/rimraf coverage .nyc_output && node_modules/.bin/nyc --reporter=html node ${YourUnitTestFile}
