@@ -2,22 +2,22 @@
 //////////////// package.json ////////////////
 //////////////////////////////////////////////
 
-{
-  "scripts": {
+// {
+//   "scripts": {
     "docs": "npm run docs:diagrams && npm run docs:code",
     "docs:diagrams": "node dev/build.docs.diagrams.js",
     "docs:code": "javadoc -i ./src/**/*/.js ./src/**/*/.vue ./src/**/*/.scss ./src/**/*/.css -o docs/README.api.md -f markdown && concat docs/README.ini.md docs/README.api.md docs/README.end.md",
     "dev:diagrams": "chokidar ./docs/**/*.skm -c 'npm run docs'"
-  },
-  "devDependencies": {
+//   },
+//   "devDependencies": {
     "concat": "^1.0.3",
     "execute-command-sync": "^1.0.2",
     "javadoc": "^2.0.0",
     "mermaid.cli": "^0.5.1",
     "node-plantuml": "^0.9.0",
     "skemator": "^1.0.3"
-  }
-}
+//   }
+// }
 
 ////////////////////////////////////////////////////////////
 //////////////// dev/build.docs.diagrams.js ////////////////
