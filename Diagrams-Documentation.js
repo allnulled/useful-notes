@@ -35,7 +35,7 @@ if (!Array.isArray(skematorFiles)) {
 	throw new Error(`Required <.meva.config.js#docs.skemator.files> to be an array`)
 }
 
-console.log(`[meva] generating ${skematorFiles.length} diagrams`);
+console.log(`generating ${skematorFiles.length} diagrams`);
 
 skematorFiles.forEach(file => {
 	const mmdFile = file.replace(/\.skm/g, ".mmd");
