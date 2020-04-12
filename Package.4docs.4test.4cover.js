@@ -4,7 +4,7 @@
 
 // >>> scripts:
     "docs": "npm run docs:diagrams && npm run docs:code",
-    "docs:diagrams": "node dev/build.docs.diagrams.js",
+    "docs:diagrams": "node dev/docs.diagrams.js",
     "docs:code": "javadoc -i ./src/**/*/.js ./src/**/*/.vue ./src/**/*/.scss ./src/**/*/.css -o docs/README.api.md -f markdown && concat docs/README.ini.md docs/README.api.md docs/README.end.md",
     "dev:diagrams": "chokidar ./docs/**/*.skm -c 'npm run docs'",
     "dev": "nodemon -w ./src -w ./test --ext '.js,.ejs' -x 'npm run test'",
@@ -28,16 +28,16 @@
     "skemator": "^1.0.3"
 // <<< :devDependencies
 
-///////////////////////////////////////////////////////
-//////////////// dev/build.diagrams.js ////////////////
-///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////// dev/docs.diagrams.js ////////////////
+//////////////////////////////////////////////////////
 //
 // Configurations:
 //
 const skematorFiles = [];
 const mermaidBackgroundColor = "#000000";
 //
-///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 //
 // Script:
 //
