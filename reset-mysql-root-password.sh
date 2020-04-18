@@ -8,8 +8,11 @@ sudo mkdir /var/run/mysqld
 sudo chown mysql:mysql /var/run/mysqld
 
 # Start MySQL withuout grant tables:
-sudo mysqld_safe --skip-grant-tables &
+sudo mysqld_safe --skip-grant-tables
 
 # Reset MySQL root password:
-mysql -u root -e "use mysql;update user set authentication_string=PASSWORD('toor') where User='root'; flush privileges; quit;"
+mysql -u root -e "use mysql;\
+update user set authentication_string=PASSWORD('toor') where User='root';\
+update user set plugin="mysql_native_password" where User='root';\
+flush privileges;"
 
