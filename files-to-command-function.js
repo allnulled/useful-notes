@@ -1,7 +1,10 @@
 /*
+///////////////////
+// INLINE USAGE: //
+///////////////////
 (function filesToCommand(text) {
   return text
-    .split(/\n[\t\r\n ]*/gi)
+    .split(/\n([\t\r\n ]*)/gi)
     .filter(s => s !== "")
     .map(f => {
       const isFile = f.endsWith("#");
@@ -17,6 +20,7 @@
 /a/b/c/README.md
 `)
 //*/
+
 module.exports = function filesToCommand(text) {
   return text
     .split(/\n[\t\r\n ]*/gi)
