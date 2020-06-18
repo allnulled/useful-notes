@@ -9,7 +9,7 @@
     .map(f => {
       const isFile = f.endsWith("#");
       const command = isFile ? "touch" : "mkdir";
-      const file = isFile ? f.substr(0, f.length-2) : f;
+      const file = isFile ? f.substr(0, f.length-1) : f;
       return `${command} ${file}`;
     })
     .join("\n");
@@ -28,7 +28,7 @@ module.exports = function filesToCommand(text) {
     .map(f => {
       const isFile = f.endsWith("#");
       const command = isFile ? "touch" : "mkdir";
-      const file = isFile ? f.substr(0, f.length-2) : f;
+      const file = isFile ? f.substr(0, f.length-1) : f;
       return `${command} ${file}`;
     })
     .join("\n");
